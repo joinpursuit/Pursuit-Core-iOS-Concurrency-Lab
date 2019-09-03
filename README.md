@@ -13,7 +13,7 @@ Create an app that loads a list of countries.  Selecting a country will go to a 
 
 ## View Controller One:
 
-This view controller should contain a:
+This view controller should contain a: 
 
 - Search Bar
 - Table View
