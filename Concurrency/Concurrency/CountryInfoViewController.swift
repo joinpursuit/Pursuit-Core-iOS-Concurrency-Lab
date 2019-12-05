@@ -19,6 +19,8 @@ class CountryInfoViewController: UIViewController {
         }
     }
     
+    var notFinished = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
@@ -27,16 +29,18 @@ class CountryInfoViewController: UIViewController {
     }
     
     private func setUp(){
-        CountryAPI.obtainCountries{ result in // async
-            switch result{
-            case .failure(let error):
-                print(error)
-            case .success(let countries):
-                self.countryInfoArr = countries
+        
+            CountryAPI.obtainCountries{ result in // async
+                switch result{
+                case .failure(let error):
+                    print(error)
+                case .success(let countries):
+                    self.countryInfoArr = countries
+                    self.notFinished = false
+                }
             }
+            print(self.countryInfoArr.count) // main thread
         }
-           // print(countryInfoArr.count) // main thread
-    }
 }
 
 extension CountryInfoViewController: UITableViewDataSource{
@@ -46,13 +50,71 @@ extension CountryInfoViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let xCell = tableView.dequeueReusableCell(withIdentifier: "countryInfoCell", for: indexPath) as? CountryInfoCell else {
-            fatalError("Could not dequeue cell as a CountryInfoCell")
-        }
-        
+            guard let xCell = tableView.dequeueReusableCell(withIdentifier: "countryInfoCell", for: indexPath) as? CountryInfoCell else {
+                fatalError("Could not dequeue cell as a CountryInfoCell")
+            }
+            xCell.cellSetUp(countryInfoArr[indexPath.row])
+            return xCell
+
     }
 }
 
 extension CountryInfoViewController: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 210
+    }
+}
+
+extension CountryAPI{
+    static func obtainCountryFlag(_ countryCode: String, completion: @escaping (Result<UIImage?,NetworkingError>) -> ()){
+        DispatchQueue.global(qos: .userInitiated).async {
+            var code: String = ""
+            if countryCode == "uk"{
+                code = "vg"
+            } else {
+                code = countryCode
+            }
+            
+            
+            let flagURL = "https://www.countryflags.io/\(code)/flat/64.png"
+            // URL
+            guard let fileURL = URL(string: flagURL) else {
+                completion(.failure(.badURL(flagURL)))
+                return
+            }
+            
+            // Get some data using URLSession this is asynchronous by default
+            let dataTask = URLSession.shared.dataTask(with: fileURL) { (data, response, error) in
+                
+                guard let unwrappedData = data else {
+                    completion(.failure(.invalidData))
+                    return
+                }
+                
+                if let unwrappedError = error {
+                    completion(.failure(.networkClientError(unwrappedError)))
+                }
+                
+                guard let unwrappedResponse = response as? HTTPURLResponse else {
+                    completion(.failure(.noResponse))
+                    return
+                }
+                
+                switch unwrappedResponse.statusCode{
+                case 200...299:
+                    break
+                default:
+                    completion(.failure(.invalidStatusCode(unwrappedResponse.statusCode)))
+                }
+                
+                guard let image = UIImage(data: unwrappedData) else {
+                    completion(.failure(.noImageFound))
+                    return
+                }
+                completion(.success(image))
+                
+            }
+            dataTask.resume()
+        }
+    }
 }

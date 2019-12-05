@@ -43,9 +43,8 @@ class ConcurrencyTests: XCTestCase {
             }
             
         }
-        
         wait(for: [exp], timeout: 3.0)
-        
-        
     }
+    
+    
 }
