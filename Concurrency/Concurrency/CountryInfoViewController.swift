@@ -15,7 +15,26 @@ class CountryInfoViewController: UIViewController {
     
     var countryInfoArr: [CountryInfo] = [] {
         didSet {
-            print("\(countryInfoArr.count)")
+            DispatchQueue.main.async{
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    var userQuery = "" {
+        didSet{
+            CountryAPI.obtainCountries{ result in
+                switch result{
+                case .success(let countries):
+                    if self.userQuery == "" {
+                        self.countryInfoArr = countries
+                    } else {
+                        self.countryInfoArr = countries.filter{$0.name.lowercased().contains(self.userQuery.lowercased())}
+                    }
+                case .failure(let error):
+                    print("Encountered Error: \(error)")
+                }
+            }
         }
     }
     
@@ -26,6 +45,7 @@ class CountryInfoViewController: UIViewController {
         setUp()
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
     }
     
     private func setUp(){
@@ -39,10 +59,10 @@ class CountryInfoViewController: UIViewController {
                     self.notFinished = false
                 }
             }
-            print(self.countryInfoArr.count) // main thread
+            // print(self.countryInfoArr.count) // main thread
         }
 }
-
+// MARK: TableView Data Source
 extension CountryInfoViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,10 +78,30 @@ extension CountryInfoViewController: UITableViewDataSource{
 
     }
 }
-
+// MARK: TableView Delegate
 extension CountryInfoViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 210
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let newStoryboard = UIStoryboard(name: "SecondStoryboard", bundle: nil)
+        guard let detailedCountryInfoVC = newStoryboard.instantiateViewController(withIdentifier: "detailedCountryInfoVC") as? DetailedCountryInfoViewController else {
+            fatalError("Could not create instance of detailed Country Info View Controller")
+        }
+        detailedCountryInfoVC.currentCountry = countryInfoArr[indexPath.row]
+        navigationController?.pushViewController(detailedCountryInfoVC, animated: true)
+    }
+}
+
+// MARK: UISearchBar Delegate methods
+extension CountryInfoViewController: UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        userQuery = searchText
     }
 }
 

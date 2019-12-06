@@ -21,7 +21,6 @@ enum NetworkingError: Error{
 struct CountryAPI {
     
     static func obtainCountries(completion: @escaping (Result<[CountryInfo], NetworkingError>) -> ()) {
-        DispatchQueue.global(qos: .userInteractive).sync{
             let countryAPIURL = "https://restcountries.eu/rest/v2/name/united"
             // Start by creating URL
             guard let fileURL = URL(string: countryAPIURL) else {
@@ -65,6 +64,5 @@ struct CountryAPI {
                 }
             }
             dataTask.resume()
-        }
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40B94FE2399C6C5007EF35D /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40B94FD2399C6C5007EF35D /* SecondStoryboard.storyboard */; };
+		C41CDBE9239ADD880086B1C5 /* DetailedCountryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41CDBE8239ADD880086B1C5 /* DetailedCountryInfoViewController.swift */; };
 		C471CC2B23997B5E002C6550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C471CC2A23997B5E002C6550 /* AppDelegate.swift */; };
 		C471CC2D23997B5E002C6550 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C471CC2C23997B5E002C6550 /* SceneDelegate.swift */; };
 		C471CC2F23997B5E002C6550 /* CountryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C471CC2E23997B5E002C6550 /* CountryInfoViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C40B94FD2399C6C5007EF35D /* SecondStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondStoryboard.storyboard; sourceTree = "<group>"; };
+		C41CDBE8239ADD880086B1C5 /* DetailedCountryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCountryInfoViewController.swift; sourceTree = "<group>"; };
 		C471CC2723997B5E002C6550 /* Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C471CC2A23997B5E002C6550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C471CC2C23997B5E002C6550 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +95,9 @@
 				C471CC2C23997B5E002C6550 /* SceneDelegate.swift */,
 				C471CC502399A45B002C6550 /* CountryInfoCell.swift */,
 				C471CC2E23997B5E002C6550 /* CountryInfoViewController.swift */,
+				C41CDBE8239ADD880086B1C5 /* DetailedCountryInfoViewController.swift */,
 				C471CC3023997B5E002C6550 /* Main.storyboard */,
+				C40B94FD2399C6C5007EF35D /* SecondStoryboard.storyboard */,
 				C471CC3323997B61002C6550 /* Assets.xcassets */,
 				C471CC3523997B61002C6550 /* LaunchScreen.storyboard */,
 				C471CC3823997B61002C6550 /* Info.plist */,
@@ -192,6 +198,7 @@
 				C471CC3723997B61002C6550 /* LaunchScreen.storyboard in Resources */,
 				C471CC3423997B61002C6550 /* Assets.xcassets in Resources */,
 				C471CC3223997B5E002C6550 /* Main.storyboard in Resources */,
+				C40B94FE2399C6C5007EF35D /* SecondStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +221,7 @@
 				C471CC2B23997B5E002C6550 /* AppDelegate.swift in Sources */,
 				C471CC4F23998A93002C6550 /* CountryInfo.swift in Sources */,
 				C471CC512399A45B002C6550 /* CountryInfoCell.swift in Sources */,
+				C41CDBE9239ADD880086B1C5 /* DetailedCountryInfoViewController.swift in Sources */,
 				C471CC2D23997B5E002C6550 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
