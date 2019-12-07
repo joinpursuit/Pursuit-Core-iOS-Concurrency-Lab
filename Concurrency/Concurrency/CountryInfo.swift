@@ -13,5 +13,11 @@ struct CountryInfo: Decodable {
     var capital: String
     var population: Int
     var topLevelDomain: [String]
+    var currencies: [MoneyInfo]
 }
 
+struct MoneyInfo: Decodable{
+    var code: String
+    var name: String
+    var symbol: String
+}

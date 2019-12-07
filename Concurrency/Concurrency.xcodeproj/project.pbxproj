@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C40B94FE2399C6C5007EF35D /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40B94FD2399C6C5007EF35D /* SecondStoryboard.storyboard */; };
 		C41CDBE9239ADD880086B1C5 /* DetailedCountryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41CDBE8239ADD880086B1C5 /* DetailedCountryInfoViewController.swift */; };
+		C41CDBEB239B02750086B1C5 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41CDBEA239B02750086B1C5 /* Currency.swift */; };
+		C41CDBED239B03C00086B1C5 /* CurrencyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41CDBEC239B03C00086B1C5 /* CurrencyAPI.swift */; };
 		C471CC2B23997B5E002C6550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C471CC2A23997B5E002C6550 /* AppDelegate.swift */; };
 		C471CC2D23997B5E002C6550 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C471CC2C23997B5E002C6550 /* SceneDelegate.swift */; };
 		C471CC2F23997B5E002C6550 /* CountryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C471CC2E23997B5E002C6550 /* CountryInfoViewController.swift */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		C40B94FD2399C6C5007EF35D /* SecondStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondStoryboard.storyboard; sourceTree = "<group>"; };
 		C41CDBE8239ADD880086B1C5 /* DetailedCountryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCountryInfoViewController.swift; sourceTree = "<group>"; };
+		C41CDBEA239B02750086B1C5 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		C41CDBEC239B03C00086B1C5 /* CurrencyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAPI.swift; sourceTree = "<group>"; };
 		C471CC2723997B5E002C6550 /* Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C471CC2A23997B5E002C6550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C471CC2C23997B5E002C6550 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 			children = (
 				C471CC4C239989A6002C6550 /* CountryAPI.swift */,
 				C471CC4E23998A93002C6550 /* CountryInfo.swift */,
+				C41CDBEC239B03C00086B1C5 /* CurrencyAPI.swift */,
+				C41CDBEA239B02750086B1C5 /* Currency.swift */,
 				C471CC2A23997B5E002C6550 /* AppDelegate.swift */,
 				C471CC2C23997B5E002C6550 /* SceneDelegate.swift */,
 				C471CC502399A45B002C6550 /* CountryInfoCell.swift */,
@@ -220,6 +226,8 @@
 				C471CC4D239989A6002C6550 /* CountryAPI.swift in Sources */,
 				C471CC2B23997B5E002C6550 /* AppDelegate.swift in Sources */,
 				C471CC4F23998A93002C6550 /* CountryInfo.swift in Sources */,
+				C41CDBEB239B02750086B1C5 /* Currency.swift in Sources */,
+				C41CDBED239B03C00086B1C5 /* CurrencyAPI.swift in Sources */,
 				C471CC512399A45B002C6550 /* CountryInfoCell.swift in Sources */,
 				C41CDBE9239ADD880086B1C5 /* DetailedCountryInfoViewController.swift in Sources */,
 				C471CC2D23997B5E002C6550 /* SceneDelegate.swift in Sources */,

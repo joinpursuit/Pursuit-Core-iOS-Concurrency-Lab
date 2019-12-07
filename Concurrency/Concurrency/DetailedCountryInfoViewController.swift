@@ -14,23 +14,34 @@ class DetailedCountryInfoViewController: UIViewController {
     @IBOutlet weak var countryNameLabel: UILabel!
     @IBOutlet weak var countryPopulationLabel: UILabel!
     @IBOutlet weak var countryCapitalLabel: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
+    @IBOutlet weak var exchangeRateLabel: UILabel!
     
     var currentCountry: CountryInfo?
+    var exchangeRates: ExchangeRate? {
+        didSet{
+            setUp()
+        }
+    }
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        setUp()
+        self.getExchangeRates()
     }
-
+    
     private func setUp(){
-        guard let curCountry = currentCountry, var countryCode = currentCountry?.topLevelDomain.first else {
+        guard let curCountry = currentCountry, var countryCode = currentCountry?.topLevelDomain.first, let exRate = exchangeRates else {
             return
         }
-
+        
         countryCode.remove(at: countryCode.startIndex)
-        countryNameLabel.text = "Name: \(curCountry.name)"
-        countryPopulationLabel.text = "Population: \(curCountry.population)"
-        countryCapitalLabel.text = "Capital: \(curCountry.capital)"
+        DispatchQueue.main.async{
+            self.countryNameLabel.text = "Name: \(curCountry.name)"
+            self.countryPopulationLabel.text = "Population: \(curCountry.population)"
+            self.countryCapitalLabel.text = "Capital: \(curCountry.capital)"
+            self.currencyLabel.text = "Currency: \(curCountry.currencies.first!.name)"
+            self.exchangeRateLabel.text = "Exchange Rate: \(String(format: "%.2f", CurrencyAPI.getAnExchangeRate(using: curCountry.currencies.first!.code, and: exRate)))"
+        }
         
         CountryAPI.obtainCountryFlag(countryCode) { (result) in
             switch result{
@@ -43,5 +54,16 @@ class DetailedCountryInfoViewController: UIViewController {
             }
         }
         
+    }
+    
+    private func getExchangeRates() {
+        CurrencyAPI.getCurrencies { (result) in
+            switch result{
+            case .failure(let netError):
+                print(netError)
+            case .success(let conCurrency):
+                self.exchangeRates = conCurrency.rates
+            }
+        }
     }
 }

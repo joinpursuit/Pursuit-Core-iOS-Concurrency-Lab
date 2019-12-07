@@ -15,44 +15,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stn-0l-DQu" userLabel="nameLabel">
+                                <rect key="frame" x="20" y="445.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTJ-uX-VAC" userLabel="populationLabel">
+                                <rect key="frame" x="20" y="489.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWm-qj-nGN" userLabel="capitalLabel">
+                                <rect key="frame" x="20" y="535.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMs-1w-uXd" userLabel="currencyLabel">
+                                <rect key="frame" x="20" y="583.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ig0-FQ-RvI" userLabel="exchangeRateLabel">
+                                <rect key="frame" x="20" y="634.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tr8-qp-Ks8">
                                 <rect key="frame" x="28" y="66" width="358" height="358.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tr8-qp-Ks8" secondAttribute="height" multiplier="1:1" id="k30-SH-I84"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="r4I-LP-Reg">
-                                <rect key="frame" x="20" y="467" width="374" height="217.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stn-0l-DQu" userLabel="nameLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTJ-uX-VAC" userLabel="populationLabel">
-                                        <rect key="frame" x="0.0" y="98.5" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWm-qj-nGN" userLabel="capitalLabel">
-                                        <rect key="frame" x="0.0" y="197" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Pnw-fw-9Pe" firstAttribute="trailing" secondItem="r4I-LP-Reg" secondAttribute="trailing" constant="20" id="6ae-E0-jrq"/>
-                            <constraint firstItem="r4I-LP-Reg" firstAttribute="top" secondItem="tr8-qp-Ks8" secondAttribute="bottom" multiplier="1.1" id="M6E-0Z-DuN"/>
-                            <constraint firstItem="r4I-LP-Reg" firstAttribute="leading" secondItem="Pnw-fw-9Pe" secondAttribute="leading" constant="20" id="Xo6-tX-6Jb"/>
+                            <constraint firstItem="stn-0l-DQu" firstAttribute="leading" secondItem="Pnw-fw-9Pe" secondAttribute="leading" constant="20" id="2Qu-Zi-ad4"/>
+                            <constraint firstItem="Ig0-FQ-RvI" firstAttribute="top" secondItem="wMs-1w-uXd" secondAttribute="bottom" multiplier="1.05" id="9e9-Un-kQZ"/>
+                            <constraint firstItem="Pnw-fw-9Pe" firstAttribute="trailing" secondItem="WWm-qj-nGN" secondAttribute="trailing" constant="20" id="BRn-o7-V4o"/>
+                            <constraint firstItem="wMs-1w-uXd" firstAttribute="top" secondItem="WWm-qj-nGN" secondAttribute="bottom" multiplier="1.05" id="IRF-3r-Mly"/>
+                            <constraint firstItem="WWm-qj-nGN" firstAttribute="top" secondItem="pTJ-uX-VAC" secondAttribute="bottom" multiplier="1.05" id="IWN-Jn-XVA"/>
+                            <constraint firstItem="Pnw-fw-9Pe" firstAttribute="trailing" secondItem="pTJ-uX-VAC" secondAttribute="trailing" constant="20" id="R90-lW-Tij"/>
+                            <constraint firstItem="wMs-1w-uXd" firstAttribute="leading" secondItem="Pnw-fw-9Pe" secondAttribute="leading" constant="20" id="TB1-HE-dfW"/>
                             <constraint firstItem="tr8-qp-Ks8" firstAttribute="top" secondItem="Pnw-fw-9Pe" secondAttribute="top" multiplier="1.5" id="Ydd-Vn-oya"/>
+                            <constraint firstItem="Ig0-FQ-RvI" firstAttribute="leading" secondItem="Pnw-fw-9Pe" secondAttribute="leading" constant="20" id="btF-cL-Ocn"/>
                             <constraint firstItem="tr8-qp-Ks8" firstAttribute="height" secondItem="CyS-03-CFK" secondAttribute="height" multiplier="0.4" id="by7-pU-0td"/>
+                            <constraint firstItem="pTJ-uX-VAC" firstAttribute="leading" secondItem="Pnw-fw-9Pe" secondAttribute="leading" constant="20" id="gpS-RY-W21"/>
+                            <constraint firstItem="Pnw-fw-9Pe" firstAttribute="trailing" secondItem="stn-0l-DQu" secondAttribute="trailing" constant="20" id="iOO-xs-M3S"/>
+                            <constraint firstItem="Pnw-fw-9Pe" firstAttribute="trailing" secondItem="Ig0-FQ-RvI" secondAttribute="trailing" constant="20" id="lDg-aQ-dYO"/>
                             <constraint firstItem="tr8-qp-Ks8" firstAttribute="centerX" secondItem="CyS-03-CFK" secondAttribute="centerX" id="n0f-xJ-lhe"/>
+                            <constraint firstItem="WWm-qj-nGN" firstAttribute="leading" secondItem="Pnw-fw-9Pe" secondAttribute="leading" constant="20" id="oD7-LF-HDG"/>
+                            <constraint firstItem="Pnw-fw-9Pe" firstAttribute="trailing" secondItem="wMs-1w-uXd" secondAttribute="trailing" constant="20" id="rYb-1A-OIc"/>
+                            <constraint firstItem="pTJ-uX-VAC" firstAttribute="top" secondItem="stn-0l-DQu" secondAttribute="bottom" multiplier="1.05" id="ryF-gb-ESx"/>
+                            <constraint firstItem="stn-0l-DQu" firstAttribute="top" secondItem="tr8-qp-Ks8" secondAttribute="bottom" multiplier="1.05" id="tBi-9t-Ete"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pnw-fw-9Pe"/>
                     </view>
@@ -60,12 +79,14 @@
                         <outlet property="countryCapitalLabel" destination="WWm-qj-nGN" id="rV7-BR-7NQ"/>
                         <outlet property="countryNameLabel" destination="stn-0l-DQu" id="7Zm-PT-82t"/>
                         <outlet property="countryPopulationLabel" destination="pTJ-uX-VAC" id="ZWI-28-0UX"/>
+                        <outlet property="currencyLabel" destination="wMs-1w-uXd" id="Jx9-JZ-wtc"/>
+                        <outlet property="exchangeRateLabel" destination="Ig0-FQ-RvI" id="aLh-8f-8dh"/>
                         <outlet property="flagImage" destination="tr8-qp-Ks8" id="rUj-6U-YOm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cu8-aD-wtC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="85"/>
+            <point key="canvasLocation" x="111.59420289855073" y="84.375"/>
         </scene>
     </scenes>
 </document>
