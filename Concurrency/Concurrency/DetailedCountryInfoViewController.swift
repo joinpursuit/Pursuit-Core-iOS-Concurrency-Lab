@@ -10,6 +10,7 @@ import UIKit
 
 class DetailedCountryInfoViewController: UIViewController {
     
+    // MARK: Outlets
     @IBOutlet weak var flagImage: UIImageView!
     @IBOutlet weak var countryNameLabel: UILabel!
     @IBOutlet weak var countryPopulationLabel: UILabel!
@@ -17,6 +18,7 @@ class DetailedCountryInfoViewController: UIViewController {
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var exchangeRateLabel: UILabel!
     
+    // MARK: Properties
     var currentCountry: CountryInfo?
     var exchangeRates: ExchangeRate? {
         didSet{
@@ -24,11 +26,12 @@ class DetailedCountryInfoViewController: UIViewController {
         }
     }
     
+    // MARK: LifeCycle Methods
     override func viewDidLoad(){
         super.viewDidLoad()
         self.getExchangeRates()
     }
-    
+    // MARK: Helper Methods
     private func setUp(){
         guard let curCountry = currentCountry, var countryCode = currentCountry?.topLevelDomain.first, let exRate = exchangeRates else {
             return
@@ -40,7 +43,7 @@ class DetailedCountryInfoViewController: UIViewController {
             self.countryPopulationLabel.text = "Population: \(curCountry.population)"
             self.countryCapitalLabel.text = "Capital: \(curCountry.capital)"
             self.currencyLabel.text = "Currency: \(curCountry.currencies.first!.name)"
-            self.exchangeRateLabel.text = "Exchange Rate: \(String(format: "%.2f", CurrencyAPI.getAnExchangeRate(using: curCountry.currencies.first!.code, and: exRate)))"
+            self.exchangeRateLabel.text = "Exchange Rate Against USD: \(String(format: "%.2f", CurrencyAPI.getAnExchangeRate(using: curCountry.currencies.first!.code, and: exRate)))"
         }
         
         CountryAPI.obtainCountryFlag(countryCode) { (result) in

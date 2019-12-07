@@ -10,11 +10,13 @@ import UIKit
 
 class CountryInfoCell: UITableViewCell {
     
+    // MARK: Outlets
     @IBOutlet weak var countryFlag: UIImageView!
     @IBOutlet weak var countryNameLabel: UILabel!
     @IBOutlet weak var countryPopulationLabel: UILabel!
     @IBOutlet weak var countryCapitalLabel: UILabel!
     
+    // MARK: Helper Methods
     func cellSetUp(_ Country: CountryInfo){
         guard var countryCode = Country.topLevelDomain.first else {
             return
