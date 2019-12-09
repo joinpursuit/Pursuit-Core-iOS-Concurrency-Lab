@@ -19,8 +19,8 @@ class CountryTableViewCell: UITableViewCell {
         // image = ?
         //        animalImageView.image = UIImage(named: animal.imageNumber.description)
         countryLabel.text = country.name
-        capitalLabel.text = country.capital
-        populationLabel.text = String(country.population)
+        capitalLabel.text = "Capital is \(country.capital)"
+        populationLabel.text = "Population is \(String(country.population)) people"
     }
     
 }

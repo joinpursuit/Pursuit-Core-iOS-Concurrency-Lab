@@ -15,7 +15,10 @@ class ViewController: UIViewController {
     
     var arrayOfCountries = [Country]() {
         didSet {
-            tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+
+            }
         }
     }
     
@@ -42,6 +45,9 @@ class ViewController: UIViewController {
         tableView.delegate = self
         searchBar.delegate = self
         loadData()
+        if Thread.isMainThread {
+            print("on the main thread")
+        }
     }
     
     func loadData() {

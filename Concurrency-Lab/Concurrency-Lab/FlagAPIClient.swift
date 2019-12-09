@@ -1,8 +1,8 @@
 //
-//  CountriesAPIClient.swift
+//  FlagAPIClient.swift
 //  Concurrency-Lab
 //
-//  Created by Yuliia Engman on 12/8/19.
+//  Created by Yuliia Engman on 12/9/19.
 //  Copyright © 2019 Yuliia Engman. All rights reserved.
 //
 
@@ -65,4 +65,3 @@ struct CountryAPIClient {
         dataTask.resume()
     }
 }
-

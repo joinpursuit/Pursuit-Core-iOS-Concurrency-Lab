@@ -10,6 +10,7 @@ import Foundation
 
 struct Country: Decodable {
     let name: String
+    let alpha2Code: String
     let capital: String
     let population: Int
     let currencies: [Money]
