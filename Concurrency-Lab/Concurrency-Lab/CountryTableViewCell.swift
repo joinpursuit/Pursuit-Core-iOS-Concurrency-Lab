@@ -10,15 +10,17 @@ import UIKit
 
 class CountryTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var flagImage: UIImageView!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var capitalLabel: UILabel!
+    @IBOutlet weak var populationLabel: UILabel!
+    
+    func configureCell(for country: Country) {
+        // image = ?
+        //        animalImageView.image = UIImage(named: animal.imageNumber.description)
+        countryLabel.text = country.name
+        capitalLabel.text = country.capital
+        populationLabel.text = String(country.population)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }
