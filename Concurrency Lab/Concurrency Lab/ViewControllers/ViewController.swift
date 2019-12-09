@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     var query = "" {
         didSet{
-            countries = getCountries().filter{$0.name.lowercased().contains(query.lowercased())}
+            countries = countries.filter{$0.name.lowercased().contains(query.lowercased())}
         }
     }
     
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     }
     
     func getCountries() -> [CountryList]{
-        let users = CountryListAPI.getListOfCountries(completion: { (result) in
+        let countries = CountryListAPI.getListOfCountries(completion: { (result) in
             switch result{
             case .failure(let appError):
                 fatalError("Error: \(appError)")
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
                 self.countries = countries
             }
         })
-        return users
+        return countries
     }
 
 }
