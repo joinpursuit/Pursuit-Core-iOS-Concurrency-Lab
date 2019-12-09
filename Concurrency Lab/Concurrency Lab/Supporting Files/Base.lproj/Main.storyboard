@@ -67,6 +67,7 @@
                                             <outlet property="countryImage" destination="GZ3-Yp-9wu" id="XGZ-4a-jm4"/>
                                             <outlet property="countryNameAndCap" destination="uxW-Cc-8wo" id="Tg5-4f-ctS"/>
                                             <outlet property="countryPop" destination="mDi-Er-OpD" id="3UN-X9-227"/>
+                                            <segue destination="jgx-zY-HGo" kind="show" id="d8y-Bj-NzY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -94,29 +95,42 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="5Vh-hA-eUU">
             <objects>
-                <viewController id="jgx-zY-HGo" sceneMemberID="viewController">
+                <viewController id="jgx-zY-HGo" customClass="DetailViewController" customModule="Concurrency_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nAD-hs-ggI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qOv-Yl-lsb">
-                                <rect key="frame" x="20" y="44" width="374" height="403"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qOv-Yl-lsb">
+                                <rect key="frame" x="20" y="108" width="374" height="448"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country Name, Captial, Population" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nC1-X1-nzw">
-                                <rect key="frame" x="20" y="455" width="374" height="156"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name, Captial, Population" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nC1-X1-nzw">
+                                <rect key="frame" x="20" y="576" width="374" height="266"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nC1-X1-nzw" firstAttribute="top" secondItem="qOv-Yl-lsb" secondAttribute="bottom" constant="20" id="1Sc-M4-w7N"/>
+                            <constraint firstItem="8UD-P6-kW4" firstAttribute="trailing" secondItem="qOv-Yl-lsb" secondAttribute="trailing" constant="20" id="5a1-vG-ppF"/>
+                            <constraint firstItem="qOv-Yl-lsb" firstAttribute="top" secondItem="8UD-P6-kW4" secondAttribute="top" constant="20" id="5ao-MU-4vZ"/>
+                            <constraint firstItem="qOv-Yl-lsb" firstAttribute="leading" secondItem="8UD-P6-kW4" secondAttribute="leading" constant="20" id="J6V-ap-aaN"/>
+                            <constraint firstItem="nC1-X1-nzw" firstAttribute="leading" secondItem="8UD-P6-kW4" secondAttribute="leading" constant="20" id="MOT-KR-LaI"/>
+                            <constraint firstItem="8UD-P6-kW4" firstAttribute="bottom" secondItem="nC1-X1-nzw" secondAttribute="bottom" constant="20" id="PtI-wN-0cs"/>
+                            <constraint firstItem="8UD-P6-kW4" firstAttribute="trailing" secondItem="nC1-X1-nzw" secondAttribute="trailing" constant="20" id="Qgs-bg-GfY"/>
+                            <constraint firstItem="qOv-Yl-lsb" firstAttribute="height" secondItem="nAD-hs-ggI" secondAttribute="height" multiplier="0.5" id="w71-of-EDQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8UD-P6-kW4"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fSE-yZ-jN1"/>
+                    <connections>
+                        <outlet property="countryLabel" destination="nC1-X1-nzw" id="ThR-Kt-01X"/>
+                        <outlet property="imageView" destination="qOv-Yl-lsb" id="JkQ-zs-tvc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FsB-cJ-Dyn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
