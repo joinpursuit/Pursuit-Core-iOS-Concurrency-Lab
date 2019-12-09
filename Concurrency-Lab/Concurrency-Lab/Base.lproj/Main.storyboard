@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--COUNTRIES-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Concurrency_Lab" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,11 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="77w-v5-X96">
-                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vwo-Tp-MGW">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="196" width="414" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countryCell" rowHeight="95" id="Z1Y-3f-ZHb" customClass="CountryTableViewCell" customModule="Concurrency_Lab" customModuleProvider="target">
@@ -91,7 +91,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="96q-jU-Il5"/>
+                    <navigationItem key="navigationItem" title="COUNTRIES" id="96q-jU-Il5"/>
                     <connections>
                         <outlet property="searchBar" destination="77w-v5-X96" id="YHM-WS-DSJ"/>
                         <outlet property="tableView" destination="Vwo-Tp-MGW" id="cF7-by-sPs"/>
@@ -101,40 +101,34 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="QpB-Dm-uTP">
             <objects>
-                <viewController id="q7A-lY-BI9" sceneMemberID="viewController">
+                <viewController id="q7A-lY-BI9" customClass="DetailViewController" customModule="Concurrency_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zFI-Yp-ood">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jX0-6a-HhS">
-                                <rect key="frame" x="20" y="96" width="374" height="200"/>
+                                <rect key="frame" x="20" y="148" width="374" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="ffV-M4-sGQ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ry7-zO-ncx">
-                                <rect key="frame" x="20" y="316" width="374" height="21"/>
+                                <rect key="frame" x="20" y="368" width="374" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oH-n9-yqa">
-                                <rect key="frame" x="20" y="357" width="374" height="18"/>
+                                <rect key="frame" x="20" y="409" width="374" height="18"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCZ-jN-PWs">
-                                <rect key="frame" x="20" y="395" width="374" height="18"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jo-dh-dW6">
-                                <rect key="frame" x="20" y="433" width="374" height="18"/>
+                                <rect key="frame" x="20" y="447" width="374" height="18"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -147,13 +141,10 @@
                             <constraint firstItem="ry7-zO-ncx" firstAttribute="top" secondItem="jX0-6a-HhS" secondAttribute="bottom" constant="20" id="9GF-0w-eVo"/>
                             <constraint firstItem="E2A-Eu-mK5" firstAttribute="trailing" secondItem="mCZ-jN-PWs" secondAttribute="trailing" constant="20" id="DVs-io-hYn"/>
                             <constraint firstItem="mCZ-jN-PWs" firstAttribute="top" secondItem="8oH-n9-yqa" secondAttribute="bottom" constant="20" id="Ea4-fW-igg"/>
-                            <constraint firstItem="E2A-Eu-mK5" firstAttribute="trailing" secondItem="8Jo-dh-dW6" secondAttribute="trailing" constant="20" id="OrE-71-hdc"/>
-                            <constraint firstItem="8Jo-dh-dW6" firstAttribute="top" secondItem="mCZ-jN-PWs" secondAttribute="bottom" constant="20" id="Ttc-88-mtt"/>
                             <constraint firstItem="E2A-Eu-mK5" firstAttribute="trailing" secondItem="ry7-zO-ncx" secondAttribute="trailing" constant="20" id="X9w-HO-eOz"/>
                             <constraint firstItem="mCZ-jN-PWs" firstAttribute="leading" secondItem="E2A-Eu-mK5" secondAttribute="leading" constant="20" id="qE5-z4-9gL"/>
                             <constraint firstItem="E2A-Eu-mK5" firstAttribute="trailing" secondItem="8oH-n9-yqa" secondAttribute="trailing" constant="20" id="qvK-0Y-fO2"/>
                             <constraint firstItem="jX0-6a-HhS" firstAttribute="leading" secondItem="E2A-Eu-mK5" secondAttribute="leading" constant="20" id="rn0-CJ-zcs"/>
-                            <constraint firstItem="8Jo-dh-dW6" firstAttribute="leading" secondItem="E2A-Eu-mK5" secondAttribute="leading" constant="20" id="szs-He-t5k"/>
                             <constraint firstItem="jX0-6a-HhS" firstAttribute="top" secondItem="E2A-Eu-mK5" secondAttribute="top" constant="8" id="v7y-V1-lqB"/>
                             <constraint firstItem="E2A-Eu-mK5" firstAttribute="trailing" secondItem="jX0-6a-HhS" secondAttribute="trailing" constant="20" id="vQB-l7-VTp"/>
                             <constraint firstItem="8oH-n9-yqa" firstAttribute="top" secondItem="ry7-zO-ncx" secondAttribute="bottom" constant="20" id="voK-3F-zik"/>
@@ -161,6 +152,12 @@
                         <viewLayoutGuide key="safeArea" id="E2A-Eu-mK5"/>
                     </view>
                     <navigationItem key="navigationItem" id="iTY-ap-eQa"/>
+                    <connections>
+                        <outlet property="capitalLabel" destination="8oH-n9-yqa" id="A66-2r-aEA"/>
+                        <outlet property="countryLabel" destination="ry7-zO-ncx" id="2tm-cp-cu6"/>
+                        <outlet property="imageView" destination="jX0-6a-HhS" id="VWt-eU-ZFd"/>
+                        <outlet property="populationLabel" destination="mCZ-jN-PWs" id="GkI-uB-u7p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUw-c2-zcQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,8 +168,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3hX-a8-0yJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7pw-zH-ces">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="7pw-zH-ces">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

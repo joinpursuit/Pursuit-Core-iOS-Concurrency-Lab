@@ -56,6 +56,14 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("verify class name in indentity inspector")
+        }
+        let country = arrayOfCountries[indexPath.row]
+        detailVC.country = country
+    }
 }
 
 extension ViewController: UITableViewDataSource {
