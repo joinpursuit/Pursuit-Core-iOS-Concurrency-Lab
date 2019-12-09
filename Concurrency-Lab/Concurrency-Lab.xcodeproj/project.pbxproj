@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F5D7C08239EDD3C00A6A4FD /* FlagAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D7C07239EDD3C00A6A4FD /* FlagAPIClient.swift */; };
+		0F5D7C08239EDD3C00A6A4FD /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D7C07239EDD3C00A6A4FD /* UIImageView+Extensions.swift */; };
+		0F946594239EE783008702DC /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F946593239EE783008702DC /* NetworkHelper.swift */; };
 		0FBE4FA8239DCFC10036D2A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4FA7239DCFC10036D2A9 /* AppDelegate.swift */; };
 		0FBE4FAA239DCFC10036D2A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4FA9239DCFC10036D2A9 /* SceneDelegate.swift */; };
 		0FBE4FAC239DCFC10036D2A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4FAB239DCFC10036D2A9 /* ViewController.swift */; };
@@ -32,7 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F5D7C07239EDD3C00A6A4FD /* FlagAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagAPIClient.swift; sourceTree = "<group>"; };
+		0F5D7C07239EDD3C00A6A4FD /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		0F946593239EE783008702DC /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		0FBE4FA4239DCFC10036D2A9 /* Concurrency-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Concurrency-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FBE4FA7239DCFC10036D2A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FBE4FA9239DCFC10036D2A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +97,8 @@
 				0FBE4FAD239DCFC10036D2A9 /* Main.storyboard */,
 				0FBE4FCD239DD5FB0036D2A9 /* Countries.swift */,
 				0FBE4FCF239DD71A0036D2A9 /* CountriesAPIClient.swift */,
-				0F5D7C07239EDD3C00A6A4FD /* FlagAPIClient.swift */,
+				0F946593239EE783008702DC /* NetworkHelper.swift */,
+				0F5D7C07239EDD3C00A6A4FD /* UIImageView+Extensions.swift */,
 				0FBE4FCB239DD2080036D2A9 /* DetailViewController.swift */,
 				0FBE4FC9239DD18A0036D2A9 /* CountryTableViewCell.swift */,
 				0FBE4FB0239DCFC50036D2A9 /* Assets.xcassets */,
@@ -216,7 +219,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FBE4FD0239DD71A0036D2A9 /* CountriesAPIClient.swift in Sources */,
-				0F5D7C08239EDD3C00A6A4FD /* FlagAPIClient.swift in Sources */,
+				0F946594239EE783008702DC /* NetworkHelper.swift in Sources */,
+				0F5D7C08239EDD3C00A6A4FD /* UIImageView+Extensions.swift in Sources */,
 				0FBE4FCA239DD18A0036D2A9 /* CountryTableViewCell.swift in Sources */,
 				0FBE4FAC239DCFC10036D2A9 /* ViewController.swift in Sources */,
 				0FBE4FCC239DD2080036D2A9 /* DetailViewController.swift in Sources */,

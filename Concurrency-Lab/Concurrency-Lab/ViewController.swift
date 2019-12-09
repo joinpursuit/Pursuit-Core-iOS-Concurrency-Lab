@@ -17,14 +17,13 @@ class ViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-
             }
         }
     }
     
     var searchQuery = "" {
         didSet {
-            CountryAPIClient.getCountries{ result in
+            CountriesAPIClient.getCountries{ result in
                 switch result {
                 case .success(let countries):
                     if self.searchQuery == "" {
@@ -45,13 +44,10 @@ class ViewController: UIViewController {
         tableView.delegate = self
         searchBar.delegate = self
         loadData()
-        if Thread.isMainThread {
-            print("on the main thread")
-        }
     }
     
     func loadData() {
-        CountryAPIClient.getCountries{result in
+        CountriesAPIClient.getCountries{result in
             switch result {
             case .failure(let error):
                 print(error)
