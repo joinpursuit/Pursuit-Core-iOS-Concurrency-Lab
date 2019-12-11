@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         configureTableView()
-        flagTableView.reloadData()
         // Do any additional setup after loading the view.
         
     }
