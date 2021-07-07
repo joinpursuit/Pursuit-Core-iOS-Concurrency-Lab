@@ -16,7 +16,7 @@ Use https://www.countryflags.io/ to get the image in a png format
 
 ## View Controller One:
 
-This view controller should contain a:
+This view controller should contain a: 
 
 - Search Bar
 - Table View
